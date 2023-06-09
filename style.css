@@ -13,6 +13,7 @@
     --linear-gradient: linear-gradient(270.16deg, #CC00FF -2.84%, #5756FF 33.42%, #07FDFD 99.91%);
     --taskDone-icon: #05FF00; 
     --font-color: #5A5A5A;
+    --border-box: #D9D9D9;
     --color-box: #FFFFFF;
 }
 
@@ -70,7 +71,10 @@ body{
     background: var(--color-box);
     border-radius: 1rem 0rem 0rem 1rem;
     border-style: none;
-    
+
+}
+#input-new-task:focus{
+    outline: none;
 }
 
 #btn-save{
@@ -93,7 +97,18 @@ body{
     font-weight: 400;
     line-height: 2.4rem;
     color: #FFFFFF;
+}
 
+/*Infos Todo and tasks adds*/
+.content-toDo-task{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 1.2rem;
+    
+    width: 64rem;
+    height: 5rem;
 }
 
 
