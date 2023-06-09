@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;600&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -11,5 +12,13 @@
     --edit-icon: #FFB800;
     --taskDone-icon: #05FF00; 
     --font-color: #5A5A5A;
-    
+    --color-box: #FFFFFF;
 }
+
+body{
+    align-items: center;
+    justify-content: center;
+    font-family:'Overpass', sans-serif;
+}
+
+
