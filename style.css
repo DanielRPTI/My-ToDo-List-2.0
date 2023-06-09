@@ -5,5 +5,11 @@
 }
 
 :root{
-    --color-backgroundcolor: 
+    --color-backgroundcolor: #FCFCFC;
+    --gradient-color:  linear-gradient(270.16deg, #CC00FF -2.84%, #5756FF 33.42%, #07FDFD 99.91%);
+    --trash-icon: #FF6262;
+    --edit-icon: #FFB800;
+    --taskDone-icon: #05FF00; 
+    --font-color: #5A5A5A;
+    
 }
