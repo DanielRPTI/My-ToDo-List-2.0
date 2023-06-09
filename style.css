@@ -6,8 +6,7 @@
 }
 
 :root{
-    --color-backgroundcolor: #FCFCFC;
-    --gradient-color:  linear-gradient(270.16deg, #CC00FF -2.84%, #5756FF 33.42%, #07FDFD 99.91%);
+    --color-background: #FCFCFC;
     --trash-icon: #FF6262;
     --edit-icon: #FFB800;
     --taskDone-icon: #05FF00; 
@@ -16,9 +15,30 @@
 }
 
 body{
+    display: flex;
     align-items: center;
     justify-content: center;
     font-family:'Overpass', sans-serif;
+    background-color: var(--color-background);
 }
+
+#title-page{    
+
+    margin: 4rem;
+    font-weight: 900;
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 51px;
+    background: linear-gradient(270.16deg, #CC00FF -2.84%, #5756FF 33.42%, #07FDFD 99.91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    
+    
+    
+    
+}
+
 
 
