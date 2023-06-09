@@ -9,6 +9,7 @@
     --color-background: #FCFCFC;
     --trash-icon: #FF6262;
     --edit-icon: #FFB800;
+    --linear-gradient: linear-gradient(270.16deg, #CC00FF -2.84%, #5756FF 33.42%, #07FDFD 99.91%);
     --taskDone-icon: #05FF00; 
     --font-color: #5A5A5A;
     --color-box: #FFFFFF;
@@ -29,15 +30,11 @@ body{
     font-size: 40px;
     text-transform: uppercase;
     line-height: 51px;
-    background: linear-gradient(270.16deg, #CC00FF -2.84%, #5756FF 33.42%, #07FDFD 99.91%);
+    background: var(--linear-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    
-    
-    
-    
-    
+   
 }
 
 
