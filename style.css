@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;600&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -17,25 +18,82 @@
 
 body{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
     font-family:'Overpass', sans-serif;
+    /* 1rem = 10px */
+    font-size: 72.5%;
+
     background-color: var(--color-background);
+    max-height: 100vh;
+
 }
 
 #title-page{    
 
-    margin: 4rem;
+    margin: 3rem;
     font-weight: 900;
     font-size: 40px;
     text-transform: uppercase;
+
     line-height: 51px;
     background: var(--linear-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-   
 }
 
+.content-task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-new-task{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    color: var(--font-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+
+    padding: 1rem;
+    gap: 0.3rem;
+
+    width: 34rem;
+    height: 4.4rem;
+
+    background: var(--color-box);
+    border-radius: 1rem 0rem 0rem 1rem;
+    border-style: none;
+    
+}
+
+#btn-save{
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    align-items: center;
+    padding: 1rem 1.6rem;
+    gap: 1rem;
+
+    width: 9rem;
+    height: 4.4rem;
+
+    background: var(--linear-gradient);
+    border-radius: 0 1rem 1rem 0;
+    border-style: none;
+
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: #FFFFFF;
+
+}
 
 
