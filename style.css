@@ -15,6 +15,7 @@
     --font-color: #5A5A5A;
     --border-box: #D9D9D9;
     --color-box: #FFFFFF;
+    --shadow-color: rgba(240, 240, 240, 0.25);
 }
 
 body{
@@ -103,12 +104,7 @@ body{
 }
 
 /*Infos Todo and tasks adds*/
-
 .content-toDo-task{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
     width: 42.93rem;
     height: 19.75rem;
 }
@@ -120,6 +116,7 @@ body{
 
     width: 42.93rem;
     height: 2.5rem;
+    margin-bottom: 1.5rem;
 
 }
 
@@ -132,10 +129,86 @@ body{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 
+    padding: 0.625rem 1rem;
+    width: 20.88rem;
+    height: 2.5rem ;
+
+    border: 1px solid var(--border-box);
+    box-shadow: 0rem 0.625rem 1.25rem var(--shadow-color);
+    background-color: var(--color-box);
+
     
 }
 #to-do-prog{
+    font-size: 1rem;
+    font-weight: 600;
 
+    background: var(--linear-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+    padding: 0.625rem 1rem;
+    width: 20.88rem;
+    height: 2.5rem ;
+
+    border: 1px solid var(--border-box);
+    box-shadow: 0rem 0.625rem 1.25rem var(--shadow-color);
+    background-color: var(--color-box);
+}
+
+.view-task ul{
+    display: flex;
+    flex-direction: column;
+    width: 42.93rem;
+    height: 2.5rem;
+    
+
+}
+
+.view-task li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 0.75rem ;
+
+    list-style-type: none;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    color: var(--font-color);
+
+    background-color: var(--color-box);
+    border: 1px solid var(--border-box);
+    box-shadow: 0rem 0.625rem 1.25rem var(--shadow-color);
+
+}
+
+/*Estilização dos botões*/
+#btn-content {
+    display: flex;
+    justify-content: space-between;    
+    width: 5rem;
+    height: 1.5rem;
+    transition: .4s;
+
+
+}
+
+#btn-content button{    
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+#btn-trash{
+    color: var(--trash-icon);
+}
+#btn-edit{
+    color: var(--edit-icon);
+}
+#btn-ok{
+    color: var(--taskDone-icon);
 }
 
 
