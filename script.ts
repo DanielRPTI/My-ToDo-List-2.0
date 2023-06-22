@@ -1,18 +1,27 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from '@prisma/client'
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient()
 
-async function main() {
-  const task  = await prisma.tasks.findMany()
-  console.log(task)
+async function createTask() {
+  try {
+    const newTask = await prisma.tasks.create({
+      data: {
+        title: 'Tarefa Teste',
+        taskDone: false
+      }
+    })
+
+    console.log('Nova tarefa criada:', newTask)
+  } catch (error) {
+    console.error('Erro ao criar nova tarefa:', error)
+  } finally {
+    await prisma.$disconnect()
+  }
 }
 
-main()
-  .then(async () => {
-    await prisma.$disconnect();
-  })
-  .catch(async (e) => {
-    console.error(e);
-    await prisma.$disconnect();
-    process.exit(1);
-  });
+
+
+
+
+
+// Executa a função createTask separadamente
