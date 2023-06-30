@@ -4,10 +4,13 @@ const app = express();
 const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient
 
+const bodyParser = require('body-parser')
+ 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
 
-app.listen(4006,()=> {
-  console.log(`server running`)
-});
+// parse application/json
+app.use(bodyParser.json())
 
 app.get('/', (req, res) =>{
     const task = console.log("First interaction");
@@ -23,21 +26,26 @@ app.get('/task', async (req, res) => {
 });
 
 app.post('/task', async (req, res) => {
-  const titleName = req.body;
-
+  
   try {
-    const message = 'Tarefa criada com sucesso'; 
-      await prisma.tasks.create({
-        data: {
-          'title' : {titleName},
-        }
-      });
-      console.log('Created Task')
-      return res.json({message});
-    
+    const data = req.body;
+    console.log(!data)
+
+//    const message = 'Tarefa criada com sucesso'; 
+//    await prisma.tasks.create({
+//      data: {
+//        'title' : {titleName},
+//      }
+//    });
+//    console.log('Created Task')
+    return res.json({data});
 
   } catch(e) {
     console.error(e);
     return res.status(500).json({message: 'something wrong'});
   }
 })
+
+app.listen(3000,()=> {
+  console.log(`server running`)
+});
