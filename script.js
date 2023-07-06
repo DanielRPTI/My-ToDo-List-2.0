@@ -57,27 +57,38 @@ app.post('/task', async (req, res) => {
   }
 });
 
-app.delete('/task', async (req, res) => {
-  const IdTask = req.body.id;
-  
-  if(!IdTask){
-    return res.status(400).json({message:'Id is missing, please try to insert a Id Task valid'})
-  }
 
+app.put('/task', async (req, res) =>{
+  
+}); 
+
+
+
+
+
+
+
+
+
+
+
+app.delete('/task', async (req, res) => {
   try{
-    const ID = await prisma.tasks.findFirst({
+    const IdTask = req.body.id;
+    if(!IdTask){
+      return res.status(400).json({message:'Id is missing, please try to insert a Id Task valid'})
+    }
+     await prisma.tasks.findFirst({
       where:{ id: IdTask},
     });
 
-    if(!ID){
+    
       await prisma.tasks.delete({
         where:{
           id : IdTask
         },
       });
-      return res.json({menssage:'Task deleted succefully!'})
-    };
-    return res.json({data});
+      return res.json({menssage:'Task deleted succefully!'});
 
   } catch(e){
     console.error(e);
@@ -85,18 +96,6 @@ app.delete('/task', async (req, res) => {
   };
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.listen(8080,()=> {
   console.log(`server running`)
