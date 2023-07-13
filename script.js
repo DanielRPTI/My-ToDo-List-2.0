@@ -58,8 +58,32 @@ app.post('/task', async (req, res) => {
 });
 
 
-app.put('/task', async (req, res) =>{
+//ATT Task to Done
+app.put('/task/taskDone', async (req, res) =>{
+try{
+  const idTask = req.body.id
+  if(!idTask){
+    return res.status(400).json({message: "Id is missing, please try to insert a Id Task valid"})
+  }
+  await prisma.tasks.findFirst({
+    where:{ id: IdTask},
+  });
   
+  await prisma.task.update({
+    where:{
+      id: idTask,
+    },
+    data: {
+      taskDone: true, 
+    },
+  })
+  return res.json({menssage:"Task has been updated!"})
+
+}catch(e){
+  console.error(e);
+  return res.status(500).json({menssage: "Something Wrong"})
+};
+
 }); 
 
 
